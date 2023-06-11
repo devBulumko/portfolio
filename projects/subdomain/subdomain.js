@@ -50,7 +50,7 @@ async function get_subdomains(domain) {
             mode:"no-cors","Access-Control-Allow-Origin": "*",credentials: 'include'
           }
         };
-        const crtshsearch = await fetch(`https://crt.sh/?q=${domain}&output=json`, opt);
+        const crtshsearch = await fetch(`https://cors-anywhere.herokuapp.com/https://crt.sh/?q=${domain}&output=json`, opt);
         const crtshresults = await crtshsearch.json();
         const crtshdata = crtshresults.map(result => result["common_name"].replace(/^\*\./, ''));
         return crtshdata;
@@ -64,7 +64,7 @@ async function get_subdomains(domain) {
     const vt = async (domain) => {
       try {
         const apikey = "005df6a2bab5ddd46edaa3452b52f06680eaed2b7d8dc7f14b5e3b656c0c5b4b";
-        const vturl = `https://www.virustotal.com/api/v3/domains/${domain}/subdomains?limit=100`;
+        const vturl = `https://cors-anywhere.herokuapp.com/https://www.virustotal.com/api/v3/domains/${domain}/subdomains?limit=100`;
         const options = {
           method: 'GET',
           headers: {

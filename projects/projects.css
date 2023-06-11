@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0 200px;
+    background-color: rgb(232,238,238);
+    font-family: sans-serif;
+}
+ul{
+    padding: 10px;
+}
+li{
+    list-style-type: none;
+    padding: 20px 10px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+ul li a{
+    font-size: 1.5rem;
+    color: navy;
+    
+}
+ul li p{   
+    font-size: 1.1rem;
+}
+ul li p:first-of-type{
+    margin: 5px 0 0 0;
+}
+body ul li ul{
+    display: flex;
+    margin: 5px 0 0 0;
+    padding: 0;
+}
+body ul li ul li{
+    font-size: 0.7rem;
+    margin: 0 5px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: gainsboro;
+}

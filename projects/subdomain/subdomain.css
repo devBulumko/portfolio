@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 50px 200px;
+    font-family: sans-serif;
+    background-color: rgb(232,238,238);
+}
+nav{
+    margin: 0 0 50px 0;
+    text-align: center;
+}
+nav a{
+    text-decoration: none;
+    border: 1px solid;
+    padding: 10px;
+    color: white;
+    background-color: navy;
+}
+nav a:hover{
+    border: 1px solid navy;
+    color: navy;
+    background-color: rgb(232,238,238);
+}
+.query{
+    width: 400px;
+    margin: 0 250px;
+    padding: 20px 10px;
+    
+    font-size: 1.2rem;
+    text-align: center;
+}
+.query p{
+    margin: 0 150px 10px 0;
+}
+.query input, button{
+    padding: 10px;
+}
+.results{
+    text-align: center;
+    padding: 10px;
+    margin: 10px 30px 0 0;
+}
+ul li{
+    list-style-type: none;
+    
+}

@@ -47,7 +47,7 @@ async function get_subdomains(domain) {
         const opt = {
           method: "GET",
           headers: {
-            mode:"no-cors","Access-Control-Allow-Origin": "https://bulumko.netlify.app"
+            mode:"no-cors","Access-Control-Allow-Origin": "*",credentials: 'include'
           }
         };
         const crtshsearch = await fetch(`https://crt.sh/?q=${domain}&output=json`, opt);
@@ -68,7 +68,7 @@ async function get_subdomains(domain) {
         const options = {
           method: 'GET',
           headers: {
-            "X-Apikey": apikey,"Access-Control-Allow-Origin": "https://bulumko.netlify.app"
+            "X-Apikey": apikey,"Access-Control-Allow-Origin": "*",credentials: 'include'
           }
         };
         const vtresult = await fetch(vturl, options);

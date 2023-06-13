@@ -14,15 +14,19 @@ function displayResults(subdomains) {
 
   // Create a download link
   const downloadLink = document.createElement("a");
-  downloadLink.href = generateDownloadURL(subdomains);
-  downloadLink.textContent = "Download Results";
-  downloadLink.style.padding = "10px"
-  downloadLink.style.border = "1px solid"
-  downloadLink.style.margin = "0 0 20px 0"
-  downloadLink.download = "subdomains.txt";
-
-  // Add the download link to the results container
-  resultview.appendChild(downloadLink);
+  if(subdomains.length<1){
+      resultview.textContent='Found 0 subdomains, or an error occurred. Try again'
+  }else{
+    resultview.append(`FOUND ${subdomains.length} SUBDOMAINS`)
+    downloadLink.href = generateDownloadURL(subdomains);
+    downloadLink.textContent = "Download Results";
+    downloadLink.style.padding = "10px"
+    downloadLink.style.border = "1px solid"
+    downloadLink.style.margin = "0 0 20px 10px"
+    downloadLink.download = "subdomains.txt";
+    // Add the download link to the results container
+    resultview.appendChild(downloadLink);
+  }
 
   // Display subdomains
   const subdomainsElement = document.createElement("div");

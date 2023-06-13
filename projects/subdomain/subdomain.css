@@ -4,46 +4,67 @@
     box-sizing: border-box;
 }
 body{
-    margin: 50px 200px;
-    font-family: sans-serif;
-    background-color: rgb(232,238,238);
+
 }
-nav{
-    margin: 0 0 50px 0;
+.container-up{
+    display: flex;
+    justify-content: center;
+}
+table{
+    width: 400px;
+    background-color: rgb(236, 235, 235);
+}
+th{
+    font-size: 1rem;
+    color: red;
+    padding: 5px;
+}
+td{
+    border-bottom: 1px solid;
+    padding: 5px;
+}
+div#intro{
+   
+}
+div#intro p:first-of-type{   
+    padding: 5px;
+    margin: 20px 0;
+    font-size: 1.5rem;
+}
+div#intro p:last-of-type{
+    color: red;
+}
+div#intro p{
+    font-size: 1.1rem;
+    margin: 2px 0;
+}
+.container-down{
+    display: flex; 
+    flex-direction: column;  
+    justify-content: center;
     text-align: center;
-}
-nav a{
-    text-decoration: none;
-    border: 1px solid;
-    padding: 10px;
-    color: white;
-    background-color: navy;
-}
-nav a:hover{
-    border: 1px solid navy;
-    color: navy;
-    background-color: rgb(232,238,238);
 }
 .query{
+    padding: 20px;
+}
+.query input{
+    padding: 10px;
+    font-size: 1.1rem;
     width: 400px;
-    margin: 0 250px;
-    padding: 20px 10px;
-    
-    font-size: 1.2rem;
-    text-align: center;
+    border-radius: 10px;
 }
 .query p{
-    margin: 0 150px 10px 0;
+    margin: 0 380px 10px 0;
+    font-size: 1.2rem;
 }
-.query input, button{
+.query button{
     padding: 10px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: none;
+    background-color: gainsboro;
 }
-.results{
-    text-align: center;
-    padding: 10px;
-    margin: 10px 30px 0 0;
-}
-ul li{
-    list-style-type: none;
-    
-}
+
+
+
+

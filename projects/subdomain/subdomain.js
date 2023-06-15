@@ -4,24 +4,31 @@ const resultview = document.querySelector(".results"); // results
 
 window.addEventListener('load', () => {
   queryBtn.addEventListener("click", () => {
+    resultview.removeAttribute("hidden")
     get_subdomains(query.value);
   });
 });
 // Function to display results
 function displayResults(subdomains) {
   // Clear previous results
+  
   resultview.innerHTML = "";
 
   // Create a download link
-  const downloadLink = document.createElement("a");
+  
   if(subdomains.length<1){
+      
       resultview.textContent='Found 0 subdomains, or an error occurred. Try again'
   }else{
     resultview.append(`FOUND ${subdomains.length} SUBDOMAINS`)
+    const downloadLink = document.createElement("a");
     downloadLink.href = generateDownloadURL(subdomains);
     downloadLink.textContent = "Download Results";
     downloadLink.style.padding = "10px"
     downloadLink.style.border = "1px solid"
+    downloadLink.style.textDecoration = "none"
+    downloadLink.style.backgroundColor="rgb(90, 90, 90)"
+    downloadLink.style.color = "white"
     downloadLink.style.margin = "0 0 20px 10px"
     downloadLink.download = "subdomains.txt";
     // Add the download link to the results container

@@ -5,6 +5,7 @@
 }
 body{
 
+    color: rgb(97, 94, 94);
 }
 .container-up{
     display: flex;
@@ -23,9 +24,7 @@ td{
     border-bottom: 1px solid;
     padding: 5px;
 }
-div#intro{
-   
-}
+
 div#intro p:first-of-type{   
     padding: 5px;
     margin: 20px 0;
@@ -43,6 +42,7 @@ div#intro p{
     flex-direction: column;  
     justify-content: center;
     text-align: center;
+    margin: 0 0 50px 0;
 }
 .query{
     padding: 20px;
@@ -65,6 +65,52 @@ div#intro p{
     background-color: gainsboro;
 }
 
-
-
+#loader{
+    position:absolute;
+    left: 50%;
+    top:50%;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    margin: 30px 0 100px -20px;
+    border: 5x solid grey;
+    border-radius: 50%;
+    border-top: 2px solid grey;
+    -webkit-animation: spin 1s linear infinite;
+}
+@-webkit-keyframes spin{
+    0%{
+        -webkit-transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.animate-bottom{
+    
+    position: relative;
+    margin: 10px 100px 0 0;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s;
+}
+@-webkit-keyframes animatebottom{
+    from{
+        bottom: -100px;
+        opacity: 0;
+    }
+    to{
+        bottom: 0;
+        opacity: 1;
+    }
+}
 

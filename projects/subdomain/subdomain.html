@@ -13,22 +13,8 @@
             <p>
                 Automate subdomain enumeration with DomainEx
             </p>
-            <p>TO USE: start a cors server <a href="https://cors-anywhere.herokuapp.com/corsdemo">here</a>, then return to this page and go about your business.</p>
-            <p>Or you could <a href="">disable</a> cors in your browser.</p>
-            <table hidden>
-                <tr>
-                    <th>Browser</th>
-                    <th>How to disable cors</th>
-                </tr>
-                <tr>
-                    <td>Chrome</td>
-                    <td> Windows+R and enter the command: chrome –disable-web-security –disable-gpu –user-data-dir=~/chromeTemp</td>
-                </tr>
-                <tr>
-                    <td>Microsoft Edge</td>
-                    <td>go to edge://flags and disable the flags related to CORS and insecure private network requests.</td>
-                </tr>
-            </table>
+            <p>TO USE: start a cors server <a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank">here</a>, then return to this page and go about your business.</p>
+            <p>Or you could disable cors in your browser.</p>
         </div>
     </div>
     <div class="container-down">
@@ -37,9 +23,11 @@
             <input type="text" name="userquery" id="userquery" placeholder="Ex: google.com">
             <button id="search">SEARCH</button>
         </div>
-        <div class="results" >
+        <div class="results animate-bottom" hidden>
             <p>Results will show below</p>
+            <div id="loader"></div>
         </div>
+        
     </div>
 
     <script src="./subdomain.js"></script>

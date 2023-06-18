@@ -14,7 +14,6 @@ header{
     display: flex;
     font-size: 1.2rem;
     justify-content:flex-start;
-    border-bottom: 1px solid;
     align-items: center;
     border-radius: 10px;
 }
@@ -97,6 +96,10 @@ ul li ul li{
     padding: 3px;
     margin: 5px ;
     background-color: rgb(180, 177, 177);
+}
+h2{
+    background-color: rgb(212, 208, 208);
+    padding: 5px;
 }
  h3{
     padding: 15px 0 5px 0;

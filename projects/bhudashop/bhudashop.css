@@ -106,6 +106,10 @@ nav button{
     height: 80vh;
     width: auto;
     overflow: scroll;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: stretch;
+
 }
 #content ul{
     display: flex;

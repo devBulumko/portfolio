@@ -473,7 +473,7 @@ a{
     
     #about,#skills,#projects{
         margin: 10px 0 20px 0 ;
-        width: max-content;
+        width: 100%;
         font-size: 1rem;
         padding: 10px 5px;
         border-radius: 10px;
